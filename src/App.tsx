@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./styles/global.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <main className="h-screen bg-zinc-50 flex items-center justify-center">
+      <form action="" className="flex flex-col gap-4 w-full max-w-xs">
+        <div className="flex flex-col gap-1">
+          <label htmlFor="">E-mail</label>
+          <input 
+            type="email" 
+            name="email" 
+            className="border-zinc-200 shadow-sm rounded h-10"
+            />
+        </div>
 
-export default App
+        <div className="flex flex-col gap-1">
+          <label htmlFor="">Senha</label>
+          <input 
+            type="password" 
+            name="password" 
+            className="border-zinc-200 shadow-sm rounded h-10"
+            />
+        </div>
+
+        <button 
+          type="submit"
+          className="bg-emerald-500 rounded font-semibold text-white h-10 hover:bg-emerald-600"
+        >
+          Salvar
+        </button>
+      </form>
+    </main>
+  );
+}
