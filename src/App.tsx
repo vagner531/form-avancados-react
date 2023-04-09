@@ -61,10 +61,10 @@ export function App() {
   }
 
   async function createUser(data: CreateUserFormData) {
-   await supabase.storage.from('forms-react').upload(
-      data.avatar.name, 
-      data.avatar
-      )
+  //  await supabase.storage.from('forms-react').upload(
+  //     data.avatar.name, 
+  //     data.avatar
+  //     )
 
     setOutput(JSON.stringify(data, null, 2));
   }
